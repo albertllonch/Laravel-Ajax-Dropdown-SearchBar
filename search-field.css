@@ -1,0 +1,152 @@
+
+.nav-search {
+    margin: 0 auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    position: absolute;
+    width: 600px;
+    max-width: 650px;
+    height: 47px;
+    margin-top: 300px;
+    z-index:1;
+}
+
+.nav-search.active {
+    box-shadow: 0 4px 4px rgba(79, 79, 79, 0.21);
+
+   .search-dropdown {
+     display: block;
+   }
+}
+
+.nav-search.active .search-input {
+    -webkit-animation: expand-search-box-animation 0.5s forwards;
+    animation: expand-search-box-animation 0.5s forwards;
+}
+
+.nav-search.active .search-input input {
+    border-width: 2px;
+}
+
+.nav-search.active .search-input .close-search {
+    display: inline-block;
+}
+
+.nav-search.active .search-input .search-dropdown {
+    display: block;
+}
+
+.nav-search .search-input {
+    transition: left 0.2s ease-in-out;
+    transition: width 0s ease-in-out;
+}
+
+.nav-search .search-input .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    z-index: 999;
+    color: #ED502E;
+}
+
+.nav-search .search-input input {
+    background: rgba(255,255,255,0.9);
+    font: 32px/1.875 "Avenir Next W01", "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+    height: 50px;
+    border: 1px solid #ED502E;
+    border-radius: 4px;
+    min-width: 300px;
+    width: 100%;
+    padding-left: 70px;
+}
+
+.nav-search .search-input input:focus {
+    outline: none;
+}
+
+.nav-search .search-input i.close-search {
+    color: #ED502E;
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.search-dropdown {
+    box-sizing: border-box;
+    color: #B3B3B3;
+    font: 14px/1.875 "Avenir Next W01", "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+    opacity: 1.00;
+    padding: 20px;
+    width: 100%;
+    -webkit-animation: expand-search-dropdown-animation 0.5s forwards;
+    animation: expand-search-dropdown-animation 0.5s forwards;
+    overflow-y: scroll;
+    max-height: 400px;
+    border-radius: 0 0 4px 4px;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.09);
+    display: none;
+}
+
+.search-dropdown .small {
+    -webkit-flex-basis: 35%;
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+}
+
+
+.search-dropdown .search-section .hits-blank {
+    color: #666;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.search-dropdown a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hit {
+  border-bottom: 1px solid #ED502E;
+  margin-bottom: 20px;
+
+  .hit-title {
+    color: #44A948;
+    font-family: 'bt_mono', monospace;
+    border-bottom: 1px solid #44A948;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: inline-block;
+    font-size: 14px;
+  }
+  .hit-description {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+      display: block;
+    margin-top: 3px;
+  }
+  .hit-anchor {
+      font-size: 13px;
+      color: #666;
+  }
+  .algolia-docsearch-suggestion--highlight {
+      background-color: #FFE9A4;
+  }
+
+  &:last-child {
+      /*border: 0;*/
+  }
+}
+
+.ais-hits--item:last-child {
+  .hit {
+    border: 0;  
+  }
+  
+}
