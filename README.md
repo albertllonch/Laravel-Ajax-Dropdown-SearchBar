@@ -1,12 +1,15 @@
-# Laravel-Ajax-Dropdown-SearchBar
+# Universidad Europea de Madrid Project
+Disclaimer. This is a sample of code developed for an university project regarding Javascript and Laravel Framework
+
+## Laravel-Ajax-Dropdown-SearchBar
 I made a search-input field that displays query result in a dropdown, integrated with Laravel and Ajax for a project, because I didn't find any on the web.
 The html/css/js layout I found them on codepen, all credit to [https://codepen.io/cwattrus/](https://codepen.io/cwattrus/)
-## Modules
+### Modules
  - Laravel function Controller
  - CSS navbar style
  - JS Ajax Handler
 
-## Quick Start
+### Quick Start
 
  1. Laravel Controller
 	````php
